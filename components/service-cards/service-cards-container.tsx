@@ -99,7 +99,7 @@ export const ServiceCardsContainer = ({
           No services found
         </Text>
         <Text className="text-sm text-foreground text-center">
-          Try adjusting your search terms or check back later
+          Try adjusting your search terms or check back laterr
         </Text>
       </View>
     );
