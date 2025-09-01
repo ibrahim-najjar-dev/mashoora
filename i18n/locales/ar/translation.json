@@ -1,0 +1,30 @@
+{
+  "home": {
+    "title": "الصفحة الرئيسية",
+    "upcoming-bookings": "الحجوزات القادمة",
+    "empty-bookings": "ليس لديك أي حجوزات قادمة.",
+    "popular-consultants": "المستشارون المشهورون",
+    "carousel": {
+      "items": [
+        {
+          "id": 1,
+          "title": "تواصل",
+          "description": "وصف للعنصر الأول"
+        },
+        {
+          "id": 2,
+          "title": "العنصر الثاني",
+          "description": "وصف للعنصر الثاني"
+        }
+      ]
+    }
+  },
+  "time": {
+    "minutes": "{{value}} دقيقة",
+    "years": "{{value}} سنة"
+  },
+  "search": {
+    "placeholder": "البحث في الاستشارات",
+    "no-results": "لم يتم العثور على نتائج"
+  }
+}

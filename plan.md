@@ -1,0 +1,9 @@
+| Day           | Morning                             | Midday                                                 | Afternoon                    | Evening                        | Night                          |
+| ------------- | ----------------------------------- | ------------------------------------------------------ | ---------------------------- | ------------------------------ | ------------------------------ |
+| **Monday**    | Fajr prayer, breakfast, laptop work | Dhuhr prayer, travel to climbing gym                   | Climbing (2–3h), travel back | Asr prayer, laptop work        | Maghrib + Isha prayers, dinner |
+| **Tuesday**   | Fajr prayer, breakfast, laptop work | Dhuhr prayer, home gym (1.5h)                          | Lunch, laptop work           | Asr prayer, laptop work        | Maghrib + Isha prayers, dinner |
+| **Wednesday** | Fajr prayer, breakfast, laptop work | Dhuhr prayer, travel to climbing gym                   | Climbing (2–3h), travel back | Asr prayer, laptop work        | Maghrib + Isha prayers, dinner |
+| **Thursday**  | Fajr prayer, breakfast, laptop work | Dhuhr prayer, home gym (1.5h)                          | Lunch, laptop work           | Asr prayer, laptop work        | Maghrib + Isha prayers, dinner |
+| **Friday**    | Fajr prayer, breakfast, laptop work | Dhuhr prayer, laptop work (lighter for Jumu’ah prayer) | Lunch, deep work             | Asr prayer, laptop work        | Maghrib + Isha prayers, dinner |
+| **Saturday**  | Fajr prayer, breakfast, laptop work | Dhuhr prayer, travel to climbing gym                   | Climbing (2–3h), travel back | Asr prayer, laptop work / rest | Maghrib + Isha prayers, dinner |
+| **Sunday**    | Fajr prayer, breakfast, laptop work | Dhuhr prayer, home gym (1.5h)                          | Lunch, laptop work           | Asr prayer, laptop work        | Maghrib + Isha prayers, dinner |

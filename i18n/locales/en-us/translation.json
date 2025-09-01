@@ -1,0 +1,30 @@
+{
+  "home": {
+    "title": "Main page",
+    "upcoming-bookings": "Upcoming bookings",
+    "empty-bookings": "You have no upcoming bookings.",
+    "popular-consultants": "Popular consultants",
+    "carousel": {
+      "items": [
+        {
+          "id": 1,
+          "title": "Connect ",
+          "description": "Description for Item 1"
+        },
+        {
+          "id": 2,
+          "title": "Item 2",
+          "description": "Description for Item 2"
+        }
+      ]
+    }
+  },
+  "time": {
+    "minutes": "{{value}} min",
+    "years": "{{value}} years"
+  },
+  "search": {
+    "placeholder": "Search Consultations",
+    "no-results": "No results found"
+  }
+}
