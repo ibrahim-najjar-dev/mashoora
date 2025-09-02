@@ -11,12 +11,12 @@ import Animated, {
 import { NAV_THEME } from "~/constants/Colors";
 import { useColorScheme } from "~/lib/useColorScheme";
 import { Button } from "../ui/button";
-import {
-  CallContent,
-  useCall,
-  useCallStateHooks,
-  useStreamVideoClient,
-} from "@stream-io/video-react-native-sdk";
+// import {
+//   CallContent,
+//   useCall,
+//   useCallStateHooks,
+//   useStreamVideoClient,
+// } from "@stream-io/video-react-native-sdk";
 import { useRouter } from "expo-router";
 
 type Props = {
@@ -70,64 +70,53 @@ export default function Spilt1({ onPressPosition }: Props) {
 
   const router = useRouter();
 
-  const { useCallState } = useCallStateHooks();
-  const callState = useCallState();
+  // const { useCallState } = useCallStateHooks();
+  // const callState = useCallState();
 
   // const client = useStreamVideoClient();
 
-  const call = useCall();
+  // const call = useCall();
 
   const [isDue, setIsDue] = useState(true); // default true for backward compatibility
   const [countdown, setCountdown] = useState<number | null>(null);
   const [scheduledTime, setScheduledTime] = useState<Date | null>(null);
 
   // const call = useCall();
-  const { useCallCallingState } = useCallStateHooks();
-  const callingState = useCallCallingState();
-
-  // const hangupCallHandler = useCallback(async () => {
-  //   try {
-  //     if (callingState === CallingState.LEFT) {
-  //       return;
-  //     }
-  //     await call?.leave({ reject: true, reason: "cancel" });
-  //   } catch (error) {
-  //     console.log("Error rejecting Call", error);
-  //   }
-  // }, [call, callingState]);
+  // const { useCallCallingState } = useCallStateHooks();
+  // const callingState = useCallCallingState();
 
   // Debug: log startsAt when call changes
-  useEffect(() => {
-    if (!callState) return;
-    const startsAt = callState.startsAt;
-    console.log("[DEBUG] call.state.startsAt:", startsAt);
-    if (!startsAt) {
-      setIsDue(false);
-      setScheduledTime(null);
-      setCountdown(null);
-      call?.leave({
-        reason: "timeout",
-      });
-    }
-    const scheduled = new Date(startsAt!);
-    // const scheduled = new Date(startsAt);
-    setScheduledTime(scheduled);
-    const now = new Date();
+  // useEffect(() => {
+  //   if (!callState) return;
+  //   const startsAt = callState.startsAt;
+  //   console.log("[DEBUG] call.state.startsAt:", startsAt);
+  //   if (!startsAt) {
+  //     setIsDue(false);
+  //     setScheduledTime(null);
+  //     setCountdown(null);
+  //     call?.leave({
+  //       reason: "timeout",
+  //     });
+  //   }
+  //   const scheduled = new Date(startsAt!);
+  //   // const scheduled = new Date(startsAt);
+  //   setScheduledTime(scheduled);
+  //   const now = new Date();
 
-    // console.log("[DEBUG] testScheduled:", testScheduled);
-    const diff = scheduled.getTime() - now.getTime();
-    if (diff > 0) {
-      setIsDue(false);
-      setCountdown(diff);
-      call?.leave({
-        reason: "timeout",
-      });
-      console.log("Call is not yet due, leaving call.");
-      return;
-    }
-    setIsDue(true);
-    setCountdown(null);
-  }, [call]);
+  //   // console.log("[DEBUG] testScheduled:", testScheduled);
+  //   const diff = scheduled.getTime() - now.getTime();
+  //   if (diff > 0) {
+  //     setIsDue(false);
+  //     setCountdown(diff);
+  //     call?.leave({
+  //       reason: "timeout",
+  //     });
+  //     console.log("Call is not yet due, leaving call.");
+  //     return;
+  //   }
+  //   setIsDue(true);
+  //   setCountdown(null);
+  // }, [call]);
 
   // Countdown timer effect (must be top-level, not nested)
   useEffect(() => {
@@ -182,11 +171,12 @@ export default function Spilt1({ onPressPosition }: Props) {
   return (
     <View className="flex-1 flex-row items-center justify-center rounded-b-2xl bg-secondary relative overflow-hidden gap-x-5 px-10">
       {isDue ? (
-        <CallContent
-          onHangupCallHandler={() => router.back()}
-          layout="grid"
-          CallControls={() => <></>}
-        />
+        // <CallContent
+        //   onHangupCallHandler={() => router.back()}
+        //   layout="grid"
+        //   CallControls={() => <></>}
+        // />
+        <></>
       ) : countdown !== null && scheduledTime ? (
         formatCountdown()
       ) : (

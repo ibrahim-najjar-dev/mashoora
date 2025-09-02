@@ -10,11 +10,11 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
-import { SceneMap, TabBar, TabView } from "react-native-tab-view";
+// import { SceneMap, TabBar, TabView } from "react-native-tab-view";
 import { NAV_THEME } from "~/constants/Colors";
 import { useColorScheme } from "~/lib/useColorScheme";
 import Icons from "../ui/icons";
-import { useCallStateHooks } from "@stream-io/video-react-native-sdk";
+// import { useCallStateHooks } from "@stream-io/video-react-native-sdk";
 import Tab1 from "./tab1";
 
 type Props = {
@@ -142,32 +142,33 @@ export default function Split2({
     },
   ]);
 
-  const renderScene = SceneMap({
-    first: Tab1,
-    second: SecondRoute,
-    third: ThirdRoute,
-  });
+  // const renderScene = SceneMap({
+  //   first: Tab1,
+  //   second: SecondRoute,
+  //   third: ThirdRoute,
+  // });
   const renderTabBar = (props: any) => {
-    return (
-      <TabBar
-        {...props}
-        className="bg-secondary"
-        indicatorStyle={{ backgroundColor: NAV_THEME[colorScheme].primary }}
-        style={{
-          backgroundColor: NAV_THEME[colorScheme].background,
-          borderTopLeftRadius: 16,
-          borderTopRightRadius: 16,
-        }}
-        labelStyle={{ color: NAV_THEME[colorScheme].text, fontWeight: "600" }}
-        activeColor={NAV_THEME[colorScheme].primary}
-        inactiveColor={NAV_THEME[colorScheme].border}
-      />
-    );
+    // return (
+    //   <TabBar
+    //     {...props}
+    //     className="bg-secondary"
+    //     indicatorStyle={{ backgroundColor: NAV_THEME[colorScheme].primary }}
+    //     style={{
+    //       backgroundColor: NAV_THEME[colorScheme].background,
+    //       borderTopLeftRadius: 16,
+    //       borderTopRightRadius: 16,
+    //     }}
+    //     labelStyle={{ color: NAV_THEME[colorScheme].text, fontWeight: "600" }}
+    //     activeColor={NAV_THEME[colorScheme].primary}
+    //     inactiveColor={NAV_THEME[colorScheme].border}
+    //   />
+    // );
+    return <></>;
   };
 
   return (
     <View className="flex-1 bg-background rounded-t-2xl">
-      <TabView
+      {/* <TabView
         commonOptions={{
           icon: ({ route, focused, color, size }) => (
             <Icons.SolarClapperboardTextBoldDuotone
@@ -184,7 +185,7 @@ export default function Split2({
         renderTabBar={renderTabBar}
         onIndexChange={setIndex}
         initialLayout={{ width: layout.width }}
-      />
+      /> */}
     </View>
   );
 }

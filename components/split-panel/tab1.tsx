@@ -1,20 +1,20 @@
-import { useCallStateHooks } from "@stream-io/video-react-native-sdk";
+// import { useCallStateHooks } from "@stream-io/video-react-native-sdk";
 import { Text, View } from "react-native";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 const Tab1 = () => {
   // const allParticipants = useParticipants();
-  const { useParticipants, useCallMembers } = useCallStateHooks();
+  // const { useParticipants, useCallMembers } = useCallStateHooks();
 
-  const participants = useParticipants();
-  const callMembers = useCallMembers();
+  // const participants = useParticipants();
+  // const callMembers = useCallMembers();
 
-  console.log(callMembers.length);
+  // console.log(callMembers.length);/
   return (
     <View className="flex-1 p-4">
       <Text className="text-lg font-bold text-foreground">First Tab</Text>
       <View className="mt-4 gap-y-4">
-        {callMembers.map((member) => (
+        {/* {callMembers.map((member) => (
           <View key={member.user_id} className="flex-row items-center gap-x-2">
             <Avatar alt={member.user.id} className="h-10 w-10">
               <AvatarImage source={{ uri: member.user.image }} />
@@ -35,7 +35,7 @@ const Tab1 = () => {
               {")"}
             </Text>
           </View>
-        ))}
+        ))} */}
       </View>
     </View>
   );

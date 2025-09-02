@@ -7,7 +7,8 @@ import { cn } from "~/lib/utils";
 import { Check } from "lucide-react-native";
 import { useColorScheme } from "~/lib/useColorScheme";
 import { NAV_THEME } from "~/constants/Colors";
-import { DateTimePicker, Slider } from "@expo/ui/swift-ui";
+// ADD-BACK
+// import { DateTimePicker, Slider } from "@expo/ui/swift-ui";
 
 interface DynamicInputProps {
   filter: Filter;
@@ -111,12 +112,12 @@ const DateInput: React.FC<DynamicInputProps> = ({
 
   return (
     <View className="p-4 justify-center items-center">
-      <DateTimePicker
+      {/* <DateTimePicker
         onDateSelected={handleDateChange}
         displayedComponents="date"
         initialDate={getInitialDate()}
         variant="wheel"
-      />
+      /> */}
     </View>
   );
 };
@@ -352,7 +353,7 @@ const NumberInput: React.FC<DynamicInputProps> = ({
           {config?.ui?.showCurrency && " SAR"}
         </Text>
 
-        <Slider
+        {/* <Slider
           steps={9}
           min={0}
           max={10}
@@ -361,7 +362,7 @@ const NumberInput: React.FC<DynamicInputProps> = ({
           onValueChange={(value) => {
             handleSliderChange(value);
           }}
-        />
+        /> */}
 
         <View className="flex-row justify-between">
           <Text className="text-xs text-muted-foreground">

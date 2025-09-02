@@ -1,9 +1,10 @@
 import { useAuth } from "@clerk/clerk-expo";
-import {
-  LogLevel,
-  StreamVideo,
-  StreamVideoClient,
-} from "@stream-io/video-react-native-sdk";
+// ADD-BACK
+// import {
+//   LogLevel,
+//   StreamVideo,
+//   StreamVideoClient,
+// } from "@stream-io/video-react-native-sdk";
 import { useAction } from "convex/react";
 import { Stack, useRouter } from "expo-router";
 import { Check, X } from "lucide-react-native";
@@ -255,32 +256,32 @@ const LayoutContent = () => {
 export default function Layout() {
   const { userId: clerkUserId } = useAuth();
 
-  const getToken = useAction(api.stream.tokenProvider);
+  // const getToken = useAction(api.stream.tokenProvider);
 
-  const tokenProvider = useMemo(() => {
-    return async () => {
-      // call your Convex action that returns the Stream token
-      const token = await getToken();
-      return token as string;
-    };
-  }, [getToken]);
+  // const tokenProvider = useMemo(() => {
+  //   return async () => {
+  //     // call your Convex action that returns the Stream token
+  //     const token = await getToken();
+  //     return token as string;
+  //   };
+  // }, [getToken]);
 
-  const client = StreamVideoClient.getOrCreateInstance({
-    apiKey: "94x5m4zdjsse",
-    user: {
-      id: clerkUserId!,
-    },
-    tokenProvider: tokenProvider,
-    options: {
-      logger: (logLevel: LogLevel, message: string, ...args: unknown[]) => {
-        console.log(`[${logLevel}] ${message}`, ...args);
-      },
-    },
-  });
+  // const client = StreamVideoClient.getOrCreateInstance({
+  //   apiKey: "94x5m4zdjsse",
+  //   user: {
+  //     id: clerkUserId!,
+  //   },
+  //   tokenProvider: tokenProvider,
+  //   options: {
+  //     logger: (logLevel: LogLevel, message: string, ...args: unknown[]) => {
+  //       console.log(`[${logLevel}] ${message}`, ...args);
+  //     },
+  //   },
+  // });
 
   return (
-    <StreamVideo client={client}>
-      <LayoutContent />
-    </StreamVideo>
+    // <StreamVideo client={client}>
+    <LayoutContent />
+    // </StreamVideo>
   );
 }

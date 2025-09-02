@@ -7,13 +7,14 @@ import {
   ActivityIndicator,
 } from "react-native";
 import z from "zod";
-import {
-  ColorPicker,
-  LabelPrimitive,
-  List,
-  Picker,
-  TextInput,
-} from "@expo/ui/swift-ui";
+// ADD-BACK
+// import {
+//   ColorPicker,
+//   LabelPrimitive,
+//   List,
+//   Picker,
+//   TextInput,
+// } from "@expo/ui/swift-ui";
 import React, { useEffect } from "react";
 import * as Form from "~/components/ui/form";
 import { NAV_THEME } from "~/constants/Colors";
@@ -151,7 +152,7 @@ const CreateService = () => {
 
       <Form.Section title="Category" footer={errors.category?.message}>
         <Form.FormItem>
-          <Controller
+          {/* <Controller
             control={control}
             name="category"
             render={({ field: { onChange, onBlur, value } }) => (
@@ -168,12 +169,12 @@ const CreateService = () => {
                 }}
               />
             )}
-          />
+          /> */}
         </Form.FormItem>
       </Form.Section>
       <Form.Section title="Duration" footer={errors.duration?.message}>
         <Form.FormItem>
-          <Controller
+          {/* <Controller
             control={control}
             name="duration"
             render={({ field: { onChange, onBlur, value } }) => (
@@ -192,7 +193,7 @@ const CreateService = () => {
                 style={{ height: 140 }}
               />
             )}
-          />
+          /> */}
         </Form.FormItem>
       </Form.Section>
 

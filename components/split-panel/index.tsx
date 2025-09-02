@@ -16,13 +16,13 @@ import Spilt2 from "~/components/split-panel/split2";
 import { NAV_THEME } from "~/constants/Colors";
 import { useColorScheme } from "~/lib/useColorScheme";
 import { Button } from "../ui/button";
-import {
-  AcceptCallButton,
-  CallControls,
-  HangUpCallButton,
-  ReactionsButton,
-  ToggleAudioPreviewButton,
-} from "@stream-io/video-react-native-sdk";
+// import {
+//   AcceptCallButton,
+//   CallControls,
+//   HangUpCallButton,
+//   ReactionsButton,
+//   ToggleAudioPreviewButton,
+// } from "@stream-io/video-react-native-sdk";
 import HangupButton from "../video/hangup-button";
 import ToggleAudioButton from "../video/toggle-audio-button";
 
@@ -125,8 +125,8 @@ export default function SpiltPanKit() {
             className={"flex-row gap-x-2 "}
           >
             <View className="flex-1 flex-row gap-x-1.5 px-2">
-              <HangupButton />
-              <ToggleAudioButton />
+              {/* <HangupButton />
+              <ToggleAudioButton /> */}
             </View>
 
             <View
